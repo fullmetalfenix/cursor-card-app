@@ -3,6 +3,8 @@
 
 Testing using cursor for a simple app - flashcards for learning about LLM's.
 
+These are my actions and some observations during this trial.
+
 
 
 
@@ -78,3 +80,19 @@ If you could provide me with more details regarding these, I can draft a detaile
 7 - just total number of cards answered correctly and quiz preformance. 
 8 - please use material design specifications. 
 9 - this is a proof of concept and is only being deployed locally. Please add a specification with sugestions on how where to deploy an app like this using free tiers. 
+
+___ Generated specifications.md included in project
+
+===
+
+## Actionable list
+
+Next - asked it:
+
+Take this specification and create a TODO list with checkboxes to help implement one feature at a time. Order the features from easy to hard in phases. For each item in the list, also define acceptance criteria.  The output should be in Markdown format.
+
+Then, added output - TODO.md
+
+
+* Note: the LLM I am using (Claude) prefaced the TODO instructions to my initial prompt but I re-ran it without so I could review the specifiactions with out it first.
+
