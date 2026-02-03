@@ -1,0 +1,42 @@
+[
+  {
+    "term": "Tokenization",
+    "definition": "Breaking down text into smaller parts, like words or characters, to help a computer understand the language."
+  },
+  {
+    "term": "Embedding",
+    "definition": "Converting words or sentences into numbers (vectors) so a computer can process them to find patterns and relationships."
+  },
+  {
+    "term": "Prompt",
+    "definition": "The text or instructions you give to an LLM. It tells the model what you want it to do or answer."
+  },
+  {
+    "term": "Context Window",
+    "definition": "The maximum amount of text (tokens) an LLM can consider at once. Like how much the model can 'remember' in a single conversation."
+  },
+  {
+    "term": "Fine-tuning",
+    "definition": "Training an existing model on new data so it gets better at specific tasks or styles without starting from scratch."
+  },
+  {
+    "term": "Inference",
+    "definition": "When the model generates a response based on your input. It uses what it learned to produce text, one token at a time."
+  },
+  {
+    "term": "Transformer",
+    "definition": "A type of neural network architecture that uses attention to process sequences of data. Most modern LLMs are built on transformers."
+  },
+  {
+    "term": "Attention",
+    "definition": "A mechanism that lets the model focus on the most relevant parts of the input when generating each part of the output."
+  },
+  {
+    "term": "LLM",
+    "definition": "Large Language Model. A type of AI trained on huge amounts of text to understand and generate human-like language."
+  },
+  {
+    "term": "Temperature",
+    "definition": "A setting that controls how random or predictable the model's responses are. Higher values mean more variety; lower values mean more focused, repeatable answers."
+  }
+]

@@ -96,3 +96,13 @@ Then, added output - TODO.md
 
 * Note: the LLM I am using (Claude) prefaced the TODO instructions to my initial prompt but I re-ran it without so I could review the specifiactions with out it first.
 
+===========================================
+
+# Moving on to implementation:
+
+left on agentic - set to auto model selection to see what it would do. Leaving off any auto accepting so I can watch the process more close.
+
+using prompt: 
+"Using the software requirements listed in @cursor-card-app/docs/specifications.md  and the TODO list please complete phase 1 of the project. Mark items as done in the todo list file only after you verify that the acceptance criteria has been met."
+
+Notes: Seems as if it couldn't access NPM for vite template files so grabed files for vite templating file-by-file from github, also made some interesting choices when running dev like using Start-Sleep in terminal before continuing after dev started. Additionally systimatic approach in installing packages as needed.  
