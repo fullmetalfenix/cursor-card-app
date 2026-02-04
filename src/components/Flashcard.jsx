@@ -4,14 +4,15 @@ import {
   CardContent,
   Typography,
   Button,
+  ButtonGroup,
   Box,
 } from '@mui/material'
 
 /**
  * Displays a single flashcard with term on front and definition on back.
- * Users can flip the card via the "Flip" button.
+ * Users can flip the card via the "Flip" button, then mark "Got it Right!" or "Got it Wrong."
  */
-function Flashcard({ term, definition }) {
+function Flashcard({ term, definition, onMarkRight, onMarkWrong }) {
   const [isFlipped, setIsFlipped] = useState(false)
 
   return (
@@ -45,7 +46,7 @@ function Flashcard({ term, definition }) {
             </Typography>
           )}
         </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, mt: 2 }}>
           <Button
             variant="contained"
             onClick={() => setIsFlipped(!isFlipped)}
@@ -53,6 +54,26 @@ function Flashcard({ term, definition }) {
           >
             {isFlipped ? 'Show term' : 'Flip'}
           </Button>
+          {isFlipped && (
+            <ButtonGroup variant="outlined" sx={{ mt: 1 }}>
+              <Button
+                color="success"
+                onClick={() => {
+                  onMarkRight?.()
+                }}
+              >
+                Got it Right!
+              </Button>
+              <Button
+                color="error"
+                onClick={() => {
+                  onMarkWrong?.()
+                }}
+              >
+                Got it Wrong
+              </Button>
+            </ButtonGroup>
+          )}
         </Box>
       </CardContent>
     </Card>

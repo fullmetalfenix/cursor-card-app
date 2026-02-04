@@ -106,3 +106,10 @@ using prompt:
 "Using the software requirements listed in @cursor-card-app/docs/specifications.md  and the TODO list please complete phase 1 of the project. Mark items as done in the todo list file only after you verify that the acceptance criteria has been met."
 
 Notes: Seems as if it couldn't access NPM for vite template files so grabed files for vite templating file-by-file from github, also made some interesting choices when running dev like using Start-Sleep in terminal before continuing after dev started. Additionally systimatic approach in installing packages as needed.  
+
+
+============
+# Phase 2 9:35 start
+prompt was 'please implement stage two in the specifications.md and upate the todo.md file to reflect the stages completed.
+
+Note: I like that I can see the planned actions being completed in the todo list provided by cursor. Process took about 5 minutes - after that checked to confirm that the todos where implemented properly in the code then I ran it.

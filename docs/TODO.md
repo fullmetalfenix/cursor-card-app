@@ -39,21 +39,21 @@ This TODO list outlines the features to be implemented for the flashcard app. Fe
 ## **Phase 2: User Feedback Mechanics**
 ### Goal: Allow users to interact with the flashcards and provide feedback.
 
-- [ ] **Add "Got it Right!" and "Got it Wrong" buttons**
+- [x] **Add "Got it Right!" and "Got it Wrong" buttons**
   - **Acceptance Criteria**:
     - Each flashcard has two buttons: "Got it Right!" and "Got it Wrong."
     - When clicked, a correct or incorrect status is saved for the current card in memory.
 
-- [ ] **Keep track of flashcard progress**
+- [x] **Keep track of flashcard progress**
   - **Acceptance Criteria**:
     - The app displays a progress indicator showing how many cards the user has completed.
     - The app updates the progress indicator in real-time as the user interacts with the "Got it Right!" / "Got it Wrong" buttons.
 
-- [ ] **Shuffling functionality**
+- [x] **Shuffling functionality**
   - **Acceptance Criteria**:
     - Cards display in shuffled order every time the user starts a new session or revisits incorrect cards.
 
-- [ ] **Review incorrect answers**
+- [x] **Review incorrect answers**
   - **Acceptance Criteria**:
     - After completing the initial deck, users can review their incorrect answers in a shuffled order.
     - Users can mark these previously incorrect answers as "Got it Right!" to update their progress.
