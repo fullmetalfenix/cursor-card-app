@@ -126,3 +126,9 @@ Prompt:
 for the functionality that has been implemented so far, pleae write end-to-end tests using playwright.
 
 * Here problems occured - when cursor implemented tests then it wrote them in a way that they would fail - most notably the test where designed to pick DOM nodes based on text but as I am using MUI for this it didn't pick up on the aria labels overwriting that text so they all failed. At this point I ran out of free requests for Cursor as the project is expanding in scope so testing cursor for Agentic Development is at an end. I have switched to Amazon Q to continue this Agentic test. 
+
+
+## Rules:
+
+Added a .cursor/rules direcory with testing.mdc file. Note - you don't have to use markdown and you can @ files in here. 
+ - these are project specific rules, you can add global rules as well for syleguides etc.
