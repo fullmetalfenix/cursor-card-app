@@ -50,7 +50,6 @@ function Flashcard({ term, definition, onMarkRight, onMarkWrong }) {
           <Button
             variant="contained"
             onClick={() => setIsFlipped(!isFlipped)}
-            aria-label={isFlipped ? 'Show term' : 'Reveal definition'}
           >
             {isFlipped ? 'Show term' : 'Flip'}
           </Button>

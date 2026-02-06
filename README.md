@@ -113,3 +113,16 @@ Notes: Seems as if it couldn't access NPM for vite template files so grabed file
 prompt was 'please implement stage two in the specifications.md and upate the todo.md file to reflect the stages completed.
 
 Note: I like that I can see the planned actions being completed in the todo list provided by cursor. Process took about 5 minutes - after that checked to confirm that the todos where implemented properly in the code then I ran it.
+
+
+=============================
+# Automating Testing
+
+first - conversation with ai - prompt: "what kind of tests cases does it make sense to have for this application?"
+
+It has recomended tests for flipping behavior, various tests for checking if state is being updated and maintained propperly, ui is being dynamically displayed at the right times and navigation remains intact - so far so good. It has also recomended future tests from skipping ahead in the specifications doc.
+
+Prompt: 
+for the functionality that has been implemented so far, pleae write end-to-end tests using playwright.
+
+* Here problems occured - when cursor implemented tests then it wrote them in a way that they would fail - most notably the test where designed to pick DOM nodes based on text but as I am using MUI for this it didn't pick up on the aria labels overwriting that text so they all failed. At this point I ran out of free requests for Cursor as the project is expanding in scope so testing cursor for Agentic Development is at an end. I have switched to Amazon Q to continue this Agentic test. 
