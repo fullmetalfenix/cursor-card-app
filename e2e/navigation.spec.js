@@ -15,7 +15,7 @@ test.describe('Navigation', () => {
     await page.getByRole('link', { name: 'Statistics' }).click()
     await expect(page).toHaveURL('/statistics')
     await expect(page.getByRole('heading', { name: 'Statistics' })).toBeVisible()
-    await expect(page.getByText(/Flashcard and quiz statistics/)).toBeVisible()
+    await expect(page.getByText(/Flashcard Progress/)).toBeVisible()
   })
 
   test('navigating back to Flashcards from Statistics', async ({ page }) => {

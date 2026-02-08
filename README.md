@@ -123,7 +123,7 @@ first - conversation with ai - prompt: "what kind of tests cases does it make se
 It has recomended tests for flipping behavior, various tests for checking if state is being updated and maintained propperly, ui is being dynamically displayed at the right times and navigation remains intact - so far so good. It has also recomended future tests from skipping ahead in the specifications doc.
 
 Prompt: 
-for the functionality that has been implemented so far, pleae write end-to-end tests using playwright.
+for the functionality that has been implemented so far, please write end-to-end tests using playwright.
 
 * Here problems occured - when cursor implemented tests then it wrote them in a way that they would fail - most notably the test where designed to pick DOM nodes based on text but as I am using MUI for this it didn't pick up on the aria labels overwriting that text so they all failed. At this point I ran out of free requests for Cursor as the project is expanding in scope so testing cursor for Agentic Development is at an end. I have switched to Amazon Q to continue this Agentic test. 
 
@@ -131,4 +131,26 @@ for the functionality that has been implemented so far, pleae write end-to-end t
 ## Rules:
 
 Added a .cursor/rules direcory with testing.mdc file. Note - you don't have to use markdown and you can @ files in here. 
- - these are project specific rules, you can add global rules as well for syleguides etc.
+ - these are project specific rules, you can add global rules as well for style guides etc.
+
+
+
+# Refactoring
+
+After a few features are created - making it readable, maintainable and efficent. Added rule to comment code automatically. It was recomended that you change to a reasoning / thinking model to comment the code.
+
+Prompt:
+"please refactor the codebase with a goal of preserving its behavior, being more efficent and more maintainable. Add comments to any important pieces of functionality describing what the functionality does and how it relates to other components or functions. These comments should be geared towards the goal of another developer being able to take this project and when looking around they should understand how the files relate to each other and the different functionality that compose the app." 
+
+* note: Cursor has hit is limit so I am using Amazon Q. with VS Code to continue. I still want to see how far this project can go using free tools. I was having a problem with Cursor any way as it was saying that all I could use was the auto model selection or GPT 41. but it did not offer GPT 4.1 and would not let me add it. 
+
+Sugestions from Q to improve the project:
+ - Extract shared state management - Create a context for flashcard state to avoid prop drilling
+ - Create utility functions - Separate shuffle and statistics calculations
+ - Add comprehensive comments - Document component relationships and data flow
+ - Optimize re-renders - Use proper memoization
+ - Create constants file - Centralize magic strings and values
+
+Some of this might be overkill for a small local project but would be good for a large scale production app and required for one to scale so I though I would let it run and evaluate the results.  
+
+Results - Refactor went great though it was drastically overfill for this project. Some notes though. First it changed the statistics page header so it failed the test for that page so that had to be fixed. It also generated two new reports - one creating the architecture and decisions that really provided an impressive amount of transparency. The other, "refactoring.md" really wasn't necessary but couldn't hurt. In a large project this would have had value though. 

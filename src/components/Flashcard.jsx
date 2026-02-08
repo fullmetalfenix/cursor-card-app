@@ -1,3 +1,21 @@
+/**
+ * Flashcard - Presentational component for a single flashcard
+ * 
+ * Features:
+ * - Displays term on front, definition on back
+ * - Flip animation controlled by local state
+ * - Right/Wrong buttons appear only when flipped
+ * 
+ * Props:
+ * - term: The flashcard term (front side)
+ * - definition: The explanation (back side)
+ * - onMarkRight: Callback when user marks card correct
+ * - onMarkWrong: Callback when user marks card incorrect
+ * 
+ * Used by: FlashcardsPage
+ * State: Local flip state only (doesn't need global context)
+ */
+
 import { useState } from 'react'
 import {
   Card,
@@ -8,11 +26,8 @@ import {
   Box,
 } from '@mui/material'
 
-/**
- * Displays a single flashcard with term on front and definition on back.
- * Users can flip the card via the "Flip" button, then mark "Got it Right!" or "Got it Wrong."
- */
 function Flashcard({ term, definition, onMarkRight, onMarkWrong }) {
+  // Local state for flip animation - doesn't need to be in global context
   const [isFlipped, setIsFlipped] = useState(false)
 
   return (
@@ -26,6 +41,7 @@ function Flashcard({ term, definition, onMarkRight, onMarkWrong }) {
       }}
     >
       <CardContent sx={{ p: 3 }}>
+        {/* Card content area - shows term or definition based on flip state */}
         <Box
           sx={{
             minHeight: 160,
@@ -46,6 +62,8 @@ function Flashcard({ term, definition, onMarkRight, onMarkWrong }) {
             </Typography>
           )}
         </Box>
+        
+        {/* Control buttons - flip always visible, right/wrong only when flipped */}
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, mt: 2 }}>
           <Button
             variant="contained"
@@ -55,20 +73,10 @@ function Flashcard({ term, definition, onMarkRight, onMarkWrong }) {
           </Button>
           {isFlipped && (
             <ButtonGroup variant="outlined" sx={{ mt: 1 }}>
-              <Button
-                color="success"
-                onClick={() => {
-                  onMarkRight?.()
-                }}
-              >
+              <Button color="success" onClick={onMarkRight}>
                 Got it Right!
               </Button>
-              <Button
-                color="error"
-                onClick={() => {
-                  onMarkWrong?.()
-                }}
-              >
+              <Button color="error" onClick={onMarkWrong}>
                 Got it Wrong
               </Button>
             </ButtonGroup>

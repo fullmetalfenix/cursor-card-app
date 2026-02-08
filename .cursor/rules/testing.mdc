@@ -2,5 +2,5 @@
 alwaysApply: true
 ---
 - Ever time you are finished with changes to the application code, please run all the playwright tests and ensure they pass
-
 - Once the changes are done, please prompt the user to see if new test should be designed for the added functionality. 
+- Key parts of the code should have comments explaining what the code does.
