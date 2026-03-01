@@ -202,3 +202,5 @@ To start the MCP server once it is set up:
 Note: at this point I had a Github MCP server running and asked for a list of pull request to test the connection and the model tried to curl it anyway. I canceled and specifically asked it to use the Github MCP server and it did. Next request was for a list of commits and the model tried a mix of things MCP and Terminal requests. 
 
 All Set with an Github MCP server. 
+
+Another note: For evaluation purposes I then asked the agent to commit and push my code and it did with a thoughtful, short and accurate commit message so worked great in this case. 
