@@ -1,9 +1,9 @@
-# Testing out cursor agentic mode 
+# Testing out cursor Agentic mode 
 ## cursor-card-app
 
 Testing using cursor for a simple app - flashcards for learning about LLM's.
 
-These are my actions and some observations during this trial.
+These are my actions and some observations during this trial. I have tried Kiro and liked it and I'm now trying out another major Agentic coding environment, cursor.
 
 
 
@@ -71,15 +71,15 @@ If you could provide me with more details regarding these, I can draft a detaile
 
 ## My Followup answers:
 
-1. hardcoded in a seperate .json file - this is just a proof of concept. 
+1. hardcoded in a separate .json file - this is just a proof of concept. 
 2 - user data can be ephemeral. no sessions needed. 
 3 - no login auth / auth needed. 
 4 - no just static for now. 
 5 - shuffled. 
 6 - blank with a term to fill in. 
-7 - just total number of cards answered correctly and quiz preformance. 
+7 - just total number of cards answered correctly and quiz performance. 
 8 - please use material design specifications. 
-9 - this is a proof of concept and is only being deployed locally. Please add a specification with sugestions on how where to deploy an app like this using free tiers. 
+9 - this is a proof of concept and is only being deployed locally. Please add a specification with suggestions on how where to deploy an app like this using free tiers. 
 
 ___ Generated specifications.md included in project
 
@@ -94,7 +94,7 @@ Take this specification and create a TODO list with checkboxes to help implement
 Then, added output - TODO.md
 
 
-* Note: the LLM I am using (Claude) prefaced the TODO instructions to my initial prompt but I re-ran it without so I could review the specifiactions with out it first.
+* Note: the LLM I am using (Claude) prefaced the TODO instructions to my initial prompt but I re-ran it without so I could review the specifications with out it first.
 
 ===========================================
 
@@ -105,12 +105,12 @@ left on agentic - set to auto model selection to see what it would do. Leaving o
 using prompt: 
 "Using the software requirements listed in @cursor-card-app/docs/specifications.md  and the TODO list please complete phase 1 of the project. Mark items as done in the todo list file only after you verify that the acceptance criteria has been met."
 
-Notes: Seems as if it couldn't access NPM for vite template files so grabed files for vite templating file-by-file from github, also made some interesting choices when running dev like using Start-Sleep in terminal before continuing after dev started. Additionally systimatic approach in installing packages as needed.  
+Notes: Seems as if it couldn't access NPM for vite template files so grabbed files for vite templating file-by-file from github, also made some interesting choices when running dev like using Start-Sleep in terminal before continuing after dev started. Additionally systematic approach in installing packages as needed.  
 
 
 ============
 # Phase 2 9:35 start
-prompt was 'please implement stage two in the specifications.md and upate the todo.md file to reflect the stages completed.
+prompt was 'please implement stage two in the specifications.md and update the todo.md file to reflect the stages completed.
 
 Note: I like that I can see the planned actions being completed in the todo list provided by cursor. Process took about 5 minutes - after that checked to confirm that the todos where implemented properly in the code then I ran it.
 
@@ -120,31 +120,31 @@ Note: I like that I can see the planned actions being completed in the todo list
 
 first - conversation with ai - prompt: "what kind of tests cases does it make sense to have for this application?"
 
-It has recomended tests for flipping behavior, various tests for checking if state is being updated and maintained propperly, ui is being dynamically displayed at the right times and navigation remains intact - so far so good. It has also recomended future tests from skipping ahead in the specifications doc.
+It has recommended tests for flipping behavior, various tests for checking if state is being updated and maintained properly, ui is being dynamically displayed at the right times and navigation remains intact - so far so good. It has also recommended future tests from skipping ahead in the specifications doc.
 
 Prompt: 
 for the functionality that has been implemented so far, please write end-to-end tests using playwright.
 
-* Here problems occured - when cursor implemented tests then it wrote them in a way that they would fail - most notably the test where designed to pick DOM nodes based on text but as I am using MUI for this it didn't pick up on the aria labels overwriting that text so they all failed. At this point I ran out of free requests for Cursor as the project is expanding in scope so testing cursor for Agentic Development is at an end. I have switched to Amazon Q to continue this Agentic test. 
+* Here problems occurred - when cursor implemented tests then it wrote them in a way that they would fail - most notably the test where designed to pick DOM nodes based on text but as I am using MUI for this it didn't pick up on the aria labels overwriting that text so they all failed. At this point I ran out of free requests for Cursor as the project is expanding in scope so testing cursor for Agentic Development is at an end. I have switched to Amazon Q to continue this Agentic test. 
 
 
 ## Rules:
 
-Added a .cursor/rules direcory with testing.mdc file. Note - you don't have to use markdown and you can @ files in here. 
+Added a .cursor/rules directory with testing.mdc file. Note - you don't have to use markdown and you can @ files in here. 
  - these are project specific rules, you can add global rules as well for style guides etc.
 
 
 
 # Refactoring
 
-After a few features are created - making it readable, maintainable and efficent. Added rule to comment code automatically. It was recomended that you change to a reasoning / thinking model to comment the code.
+After a few features are created - making it readable, maintainable and efficient. Added rule to comment code automatically. It was recommended that you change to a reasoning / thinking model to comment the code.
 
 Prompt:
-"please refactor the codebase with a goal of preserving its behavior, being more efficent and more maintainable. Add comments to any important pieces of functionality describing what the functionality does and how it relates to other components or functions. These comments should be geared towards the goal of another developer being able to take this project and when looking around they should understand how the files relate to each other and the different functionality that compose the app." 
+"please refactor the codebase with a goal of preserving its behavior, being more efficient and more maintainable. Add comments to any important pieces of functionality describing what the functionality does and how it relates to other components or functions. These comments should be geared towards the goal of another developer being able to take this project and when looking around they should understand how the files relate to each other and the different functionality that compose the app." 
 
 * note: Cursor has hit is limit so I am using Amazon Q. with VS Code to continue. I still want to see how far this project can go using free tools. I was having a problem with Cursor any way as it was saying that all I could use was the auto model selection or GPT 41. but it did not offer GPT 4.1 and would not let me add it. 
 
-Sugestions from Q to improve the project:
+Suggestions from Q to improve the project:
  - Extract shared state management - Create a context for flashcard state to avoid prop drilling
  - Create utility functions - Separate shuffle and statistics calculations
  - Add comprehensive comments - Document component relationships and data flow
@@ -153,4 +153,52 @@ Sugestions from Q to improve the project:
 
 Some of this might be overkill for a small local project but would be good for a large scale production app and required for one to scale so I though I would let it run and evaluate the results.  
 
-Results - Refactor went great though it was drastically overfill for this project. Some notes though. First it changed the statistics page header so it failed the test for that page so that had to be fixed. It also generated two new reports - one creating the architecture and decisions that really provided an impressive amount of transparency. The other, "refactoring.md" really wasn't necessary but couldn't hurt. In a large project this would have had value though. 
+Results - Refactor went great though it was drastically overkill for this project. Some notes though. First it changed the statistics page header so it failed the test for that page so that had to be fixed. It also generated two new reports - one creating the architecture and decisions that really provided an impressive amount of transparency. The other, "refactoring.md" really wasn't necessary but couldn't hurt. In a large project this would have had value though. 
+
+
+
+## Accessing MCP servers:
+
+LLM's do not naturally have access to fresh data so MCP is here to give LLM's access to content and tools. The difference between an MCP server and an API is that with API's you have to know the endpoints explicitly where as exposing an MCP server opens up services offered by the server (usually data and tools) to be read and understood by an LLM - including when too use what and how the data is going to be formatted. Another difference? MCP servers are NOT stateless and can remember conversational context between calls. Another difference is that API's are called and information is handled by the developer's framework for doing such actions where as MCP communication is driven by the LLM Agents. Think of it like going to the library for data - with an API you would have to be familiar with the library's filing system and go and get the data (book I guess) yourself where as with MCP you would just ask the front desk for what you want and they could get it for you. Error handling is also supposed to be easier as with an API call you just get an error message most of the time where as an LLE is supposed to be able to get more information from an MCP server about what went wrong.
+
+Use MCP when you are finding yourself doing repeated actions in cursor or adding new functionality - example - there are security mcp servers like Aikido Security that you can use to connect to Aikido Security and have your agent use code / secrets scanning - you do still need a api key though.
+
+
+There are a ton of MCP servers you can include in your project located here: https://cursor.directory/mcp
+
+
+### Add GitHub MCP server (VS Code) 
+
+------------------Note: starting here .....
+
+This project now includes a VS Code MCP config at `.vscode/mcp.json`.
+
+1. Open this workspace in VS Code.
+2. Run the command `MCP: List Servers` and start `github` if it is not already running.
+3. When prompted, enter your GitHub Personal Access Token.
+	- Typical read/write repo automation scope: `repo`
+	- Public-only workflows: `public_repo`
+4. Trust the server when VS Code asks.
+
+Server command:
+- `npx -y @modelcontextprotocol/server-github`
+
+--------------------- and ending here was generated by copilot.
+
+I switched from cursor to vs code once I hit the cursor free tier limit. Interestingly enough, when I was setting up the MCP server connection in VS Code for github copilot actually started to set up the config like it was still in cursor as it had read the readme and decided that was the way to go.
+
+
+Note - you need a Personal access token for the MCP Server here: 
+https://github.com/settings/personal-access-tokens
+set it up how you want - I am doing fine grain (only the repo for this project) and giving issue and content read/write privileges (minimum scope).
+
+This method also stores the PAT locally and not in your code making it less likely to get into the Agents context (should be safe but please don't take my word for it)
+
+To start the MCP server once it is set up:
+- command pallette > "MCP: List Servers" > Github > Start
+- Give your Personal Access Token to the prompt.
+- command pallette > "MCP: List Servers" to check if its running
+
+Note: at this point I had a Github MCP server running and asked for a list of pull request to test the connection and the model tried to curl it anyway. I canceled and specifically asked it to use the Github MCP server and it did. Next request was for a list of commits and the model tried a mix of things MCP and Terminal requests. 
+
+All Set with an Github MCP server. 
